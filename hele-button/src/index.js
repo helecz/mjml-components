@@ -1,47 +1,35 @@
 import { MJMLElement } from 'mjml-core';
-import merge from 'lodash/merge';
 import MJMLButton from 'mjml-button';
 import React, { Component } from 'react';
 
 const tagName = 'hele-button';
-const endingTag = false;
+const endingTag = true;
 const columnElement = false;
 
-const defaultMJMLDefinition = {
-  attributes: {
-    'color': '#41b79d',
-    'font-family': 'Helvetica',
-    'margin-top': '10px'
-  }
-};
+const defaultMJMLDefinition = { };
 
-const baseStyles = {
-  div: {
-    cursor: 'auto'
-  }
-};
+const baseStyles = { };
 
 @MJMLElement
 class HeleButton extends Component {
-
-
-  getStyles () {
-    const { mjAttribute, color } = this.props;
-
-    return merge({}, this.constructor.baseStyles, {
-      text: {
-        color: mjAttribute('color')
-      }
-    })
-  }
-
   render () {
-    const css = this.getStyles();
-    const content = 'Hello World!';
+    const { mjContent } = this.props;
 
     return (
-      <MJMLButton style={css}>
-        {content}
+      <MJMLButton
+        background-color="#41b79d"
+        color="white"
+        border-radius="0"
+        padding="7px 5px"
+        align="middle"
+        container-background-color="#41b79d"
+        font-size="14px"
+        font-weight="600"
+        font-family="Arial, Helvetica, sans-serif"
+      >
+        <span
+          style={{ textTransform: 'uppercase' }}
+        >{mjContent()}</span>
       </MJMLButton>
     )
   }
