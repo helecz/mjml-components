@@ -29,7 +29,8 @@ class HeleButton extends Component {
       >
         <span
           style={{ textTransform: 'uppercase' }}
-        >{mjContent()}</span>
+          dangerouslySetInnerHTML={{ __html: mjContent() }}
+        />
       </MJMLButton>
     )
   }
