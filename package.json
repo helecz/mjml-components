@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mjml": "mjml"
+    "dev:mjml": "mjml"
   },
-  "author": "",
+  "author": "Hele.cz",
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.9.0",
@@ -17,9 +17,17 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.9.0",
     "lodash": "^4.13.1",
-    "mjml": "^2.1.4",
     "mjml-button": "^2.0.5",
+    "mjml-column": "^2.0.6",
     "mjml-core": "^2.1.4",
+    "mjml-html": "^2.0.6",
+    "mjml-image": "^2.0.6",
+    "mjml-raw": "^2.0.6",
+    "mjml-section": "^2.0.6",
+    "mjml-text": "^2.0.6",
     "react": "^15.1.0"
+  },
+  "devDependencies": {
+    "mjml": "^2.2.0"
   }
 }

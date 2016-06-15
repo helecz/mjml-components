@@ -13,7 +13,7 @@ const baseStyles = { };
 @MJMLElement
 class HeleButton extends Component {
   render () {
-    const { mjContent, mjAttribute } = this.props;
+    const { mjContent } = this.props;
 
     return (
       <MJMLButton
