@@ -1,5 +1,6 @@
 import { MJMLElement } from 'mjml-core';
 import MJMLText from 'mjml-text';
+import MJMLRaw from 'mjml-raw';
 import MJMLDivider from 'mjml-divider';
 import MJMLColumn from 'mjml-column';
 import MJMLSection from 'mjml-section';
@@ -25,10 +26,11 @@ class HeleFooter extends Component {
 						color="#000000"
 						padding="5px 0"
 					>
-						Potřebujete poradit? Zavolejte nám na <a href="tel:+420776440203" target="_blank"
-						style={{ textDecoration: 'none', color: '#000000' }}> 776 440 203 </a> nebo napište
-						<a href="mailto:ju&64;hele.cz" target="_blank"
-							style={{ color: '#41b79d', textDecoration: 'underline' }}> ju@hele.cz </a>
+						<span
+							dangerouslySetInnerHTML={{
+								__html: `Potřebujete poradit? Zavolejte nám na <a href="tel:+420776440203" target="_blank" style="text-decoration: none; color: #000000">776 440 203</a> nebo napište <a href="mailto:ju&64;hele.cz" target="_blank" style="color: #41b79d; text-decoration: underline">ju@hele.cz</a>`
+							}}
+						/>
 					</MJMLText>
 					<MJMLText
 						font-family="Helvetica, Arial, sans-serif"
@@ -36,9 +38,11 @@ class HeleFooter extends Component {
 						color="#5c5c5c"
 						padding="5px 0"
 					>
-						Toto je obchodní sdělení portálu Hele.cz (Slevomat.cz, s.r.o.). Pro odhlášení z týdenního přehledu akcí <a
-						href="https://www.hele.cz/ju/mail/odhlaseni?email=%email%&token=%token%" target="_blank"
-						style={{ color: '#41b79d', textDecoration: 'none' }}> klikněte zde</a>
+						<span
+							dangerouslySetInnerHTML={{
+								__html: `Toto je obchodní sdělení portálu Hele.cz (Slevomat.cz, s.r.o.). Pro odhlášení z týdenního přehledu akcí <a href="https://www.hele.cz/ju/mail/odhlaseni?email=%email%&token=%token%" target="_blank" style="color: #41b79d; text-decoration: none"> klikněte zde</a>`
+							}}
+						/>
 					</MJMLText>
 				</MJMLColumn>
 			</MJMLSection>
