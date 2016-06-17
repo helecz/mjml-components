@@ -1,6 +1,7 @@
 {
   "packages": [
     "hele-mjml-components/hele-button",
+    "hele-mjml-components/hele-footer",
     "hele-mjml-components/hele-heading",
     "hele-mjml-components/hele-logo",
     "hele-mjml-components/hele-subheading",

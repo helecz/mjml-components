@@ -20,6 +20,7 @@
     "mjml-button": "^2.0.5",
     "mjml-column": "^2.0.6",
     "mjml-core": "^2.1.4",
+    "mjml-divider": "^2.0.7",
     "mjml-html": "^2.0.6",
     "mjml-image": "^2.0.6",
     "mjml-raw": "^2.0.6",
