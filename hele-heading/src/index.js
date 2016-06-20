@@ -2,7 +2,7 @@ import { MJMLElement } from 'mjml-core';
 import MJMLText from 'mjml-text';
 import MJMLColumn from 'mjml-column';
 import MJMLSection from 'mjml-section';
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react';
 
 import cleanContent from '../../helpers/cleanContent';
 
@@ -15,27 +15,32 @@ const baseStyles = {};
 @MJMLElement
 class HeleHeading extends Component {
 
-	render() {
-		const { mjContent } = this.props;
+  static propTypes = {
+    parentWidth: PropTypes.string.isRequired,
+    mjContent: PropTypes.func.isRequired,
+  };
 
-		const content = cleanContent(mjContent());
+  render() {
+    const { mjContent } = this.props;
 
-		return (
-			<MJMLSection parentWidth={this.props.parentWidth} padding="0 10px">
-				<MJMLColumn width="100%">
-					<MJMLText
-						color="#000000"
-						font-family="Helvetica, Arial, sans-serif"
-						font-size="24px"
-						font-weight="bold"
-						padding="20px 0 10px"
-					>
-						{ content }
-					</MJMLText>
-				</MJMLColumn>
-			</MJMLSection>
-		)
-	}
+    const content = cleanContent(mjContent());
+
+    return (
+      <MJMLSection parentWidth={this.props.parentWidth} padding="0 10px">
+        <MJMLColumn width="100%">
+          <MJMLText
+            color="#000000"
+            font-family="Helvetica, Arial, sans-serif"
+            font-size="24px"
+            font-weight="bold"
+            padding="20px 0 10px"
+          >
+            {content}
+          </MJMLText>
+        </MJMLColumn>
+      </MJMLSection>
+    );
+  }
 }
 
 HeleHeading.tagName = tagName;
