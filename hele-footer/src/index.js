@@ -32,7 +32,7 @@ class HeleFooter extends Component {
             {/* eslint-disable max-len */}
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Potřebujete poradit? Zavolejte nám na <a href="tel:+420776440203" target="_blank" style="text-decoration: none; color: #000000">776 440 203</a> nebo napište <a href="mailto:ju&64;hele.cz" target="_blank" style="color: #41b79d; text-decoration: underline">ju@hele.cz</a>',
+                __html: 'Potřebujete poradit? Zavolejte nám na <a href="tel:+420776440203" target="_blank" style="text-decoration: none; color: #000000">776 440 203</a> nebo napište <a href="mailto:ju&#64;hele.cz" target="_blank" style="color: #41b79d; text-decoration: underline">ju@hele.cz</a>',
               }}
             />
             {/* eslint-enable max-len */}
