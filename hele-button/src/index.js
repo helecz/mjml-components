@@ -14,6 +14,7 @@ const defaultMJMLDefinition = {
   attributes: {
     href: '',
     'full-width': false,
+    center: false,
   },
 };
 
@@ -30,8 +31,12 @@ class HeleButton extends Component {
 
   isFullWidth() {
     const { mjAttribute } = this.props;
-
     return mjAttribute('full-width') !== false;
+  }
+
+  isCentered() {
+    const { mjAttribute } = this.props;
+    return mjAttribute('center') !== false;
   }
 
   render() {
@@ -40,12 +45,13 @@ class HeleButton extends Component {
     const content = cleanContent(mjContent());
 
     const isFullWidth = this.isFullWidth();
+    const isCentered = this.isCentered();
 
     return (
       <MJMLSection
         parentWidth={this.props.parentWidth}
         padding="10px 10px"
-        text-align={isFullWidth ? 'center' : 'left'}
+        text-align={isFullWidth || isCentered ? 'center' : 'left'}
       >
         <MJMLColumn
           width={isFullWidth ? '100%' : '300px'}
