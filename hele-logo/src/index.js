@@ -26,6 +26,7 @@ class HeleLogo extends Component {
             src="https://www.hele.cz/assets/img/logo-hele-bubble.png"
             href="https://www.hele.cz"
             padding="10"
+            alt=""
             width="78"
           />
         </MJMLColumn>
