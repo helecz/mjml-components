@@ -24,7 +24,7 @@ class HeleLogo extends Component {
         <MJMLColumn width="100%">
           <MJMLImage
             src="{$bubbleLogoLink}"
-            href="{$mailLinkGenerator->generateFrontLink()}"
+            href="{$linkGenerator->generateFrontLink()}"
             padding="10"
             alt=""
             width="78"
