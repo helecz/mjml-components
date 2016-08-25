@@ -32,10 +32,9 @@ class HeleFooter extends Component {
             {/* eslint-disable max-len */}
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Potřebujete poradit? Zavolejte nám na <a href="tel:+420776440203" target="_blank" style="text-decoration: none; color: #000000">776 440 203</a> nebo napište <a href="mailto:ju&#64;hele.cz" target="_blank" style="color: #41b79d; text-decoration: underline">ju@hele.cz</a>',
+                __html: 'Potřebujete poradit? Zavolejte nám na <a href="tel:{$contactPhone|phone}" target="_blank" style="text-decoration: none; color: #000000">{$contactPhone|phone}</a> nebo napište <a href="mailto:ju&#64;hele.cz" target="_blank" style="color: #41b79d; text-decoration: underline">ju@hele.cz</a>',
               }}
             />
-            {/* eslint-enable max-len */}
           </MJMLText>
           <MJMLText
             font-family="Helvetica, Arial, sans-serif"
@@ -46,7 +45,7 @@ class HeleFooter extends Component {
             {/* eslint-disable max-len */}
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Toto je obchodní sdělení portálu Hele.cz (Slevomat.cz, s.r.o.). Pro odhlášení z týdenního přehledu akcí <a href="https://www.hele.cz/ju/mail/odhlaseni?email=%email%&token=%token%" target="_blank" style="color: #41b79d; text-decoration: none"> klikněte zde</a>',
+                __html: 'Toto je obchodní sdělení portálu Hele.cz (Slevomat.cz, s.r.o.). Pro odhlášení z týdenního přehledu akcí <a href="{$unsubscribeLink}" target="_blank" style="color: #41b79d; text-decoration: none"> klikněte zde</a>',
               }}
             />
             {/* eslint-enable max-len */}
