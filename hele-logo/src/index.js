@@ -23,8 +23,8 @@ class HeleLogo extends Component {
       <MJMLSection parentWidth={this.props.parentWidth}>
         <MJMLColumn width="100%">
           <MJMLImage
-            src="{$bubbleLogoLink}"
-            href="{$linkGenerator->generateFrontLink()}"
+            src="{$bubbleLogoLink|noescape}"
+            href="{$linkGenerator->generateFrontLink()|noescape}"
             padding="10"
             alt=""
             width="78"

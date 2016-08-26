@@ -45,7 +45,7 @@ class HeleFooter extends Component {
             {/* eslint-disable max-len */}
             <span
               dangerouslySetInnerHTML={{
-                __html: 'Toto je obchodní sdělení portálu Hele.cz (Slevomat.cz, s.r.o.). Pro odhlášení z týdenního přehledu akcí <a href="{$unsubscribeLink}" target="_blank" style="color: #41b79d; text-decoration: none"> klikněte zde</a>',
+                __html: 'Toto je obchodní sdělení portálu Hele.cz (Slevomat.cz, s.r.o.). Pro odhlášení z týdenního přehledu akcí <a href="{$unsubscribeLink|noescape}" target="_blank" style="color: #41b79d; text-decoration: none"> klikněte zde</a>',
               }}
             />
             {/* eslint-enable max-len */}
